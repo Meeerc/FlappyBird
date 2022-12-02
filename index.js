@@ -1,18 +1,22 @@
 let pipes = [];
 let bird;
-let birdImg ;
+let birdImg;
+let backgroundImg;
 
 function preload() {
     birdImg = loadImage('.idea/Flappy Bird (1).png');
+    backgroundImg = loadImage('wp6957163.png');
+
 }
+
 function setup() {
-    createCanvas(windowWidth,windowHeight);
+    createCanvas(windowWidth, windowHeight);
     bird = new Bird()
 
 }
 
 function draw() {
-    background(0);
+    image(backgroundImg, 0, 0, 10, 10);
     bird.show();
     bird.update();
 
@@ -24,11 +28,10 @@ function draw() {
         pipes[i].update();
 
         if (pipes[i].offscreen()) {
-            pipes.splice(i,1);
+            pipes.splice(i, 1);
         }
 
     }
-
 
 
 }
