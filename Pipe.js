@@ -23,8 +23,8 @@ class pipe {
         return this.x < -20;
     }
     hits(bird) {
-        if (bird.x + bird.radius - (this.x + this.width) < 0 && bird.y + bird.radius > this.bot && bird.y + bird.radius < this.top) {
-            console.log("1");
-        }
+        return (this.hitsTop(bird) || this.hitsBot(bird));
     }
+
+    hitsTIp
 }
