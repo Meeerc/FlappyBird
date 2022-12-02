@@ -1,5 +1,10 @@
 let pipes = [];
 let bird;
+let birdImg ;
+
+function preload() {
+    birdImg = loadImage('.idea/Flappy Bird (1).png');
+}
 function setup() {
     createCanvas(windowWidth,windowHeight);
     bird = new Bird()

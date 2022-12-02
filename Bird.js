@@ -6,11 +6,13 @@ class Bird {
         this.y = windowHeight / 2;
         this.speed = 0;
         this.gravity = this.g;
-        this.radius = 20;
+        this.radius = 30;
     }
 
     show() {
         circle(this.x, this.y, this.radius * 2);
+        imageMode(CENTER);
+        image(birdImg, this.x - (this.x/9), this.y, this.radius * 5, this.radius * 5);
     }
 
     update() {
