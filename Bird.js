@@ -6,7 +6,7 @@ class Bird {
         this.y = windowHeight / 2;
         this.speed = 0;
         this.gravity = this.g;
-        this.radius = 30;
+        this.radius = 15;
     }
 
     show() {
