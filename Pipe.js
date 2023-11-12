@@ -17,14 +17,14 @@ class pipe {
         imageMode(CORNER);
         image(upperPipeImg, this.x -20, this.top -390, 120, 400);
         rect(this.x, this.bot, this.width, windowHeight - this.bot); //lower part of pipe
-        image(lowerPipeImg, this.x -20, this.bot, 120, 400)
+        //image(lowerPipeImg, this.x -20, this.bot, 120, 400)
         if (this.hits(bird)) {
             frameRate(0);
 
         }
     }
     update() {
-        this.x -= 3  ;
+        this.x -= 15  ;
     }
     offscreen() {
         return this.x < -20;

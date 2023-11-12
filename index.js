@@ -5,9 +5,9 @@ let backgroundImg, upperPipeImg, lowerPipeImg;
 
 function preload() {
     birdImg = loadImage('.idea/Flappy Bird (1).png');
-    backgroundImg = loadImage('.idea/background.png');
-    upperPipeImg = loadImage('.idea/Upper Pipe.png');
-    lowerPipeImg = loadImage('.idea/Lower Pipe.png');
+    backgroundImg = loadImage('.idea/7582.jpg');
+    upperPipeImg = loadImage('New Piskel.png');
+    //lowerPipeImg = loadImage('.idea/Lower Pipe.png');
 }
 
 function setup() {
@@ -17,13 +17,13 @@ function setup() {
 }
 
 function draw() {
-
+    //background(0);
     imageMode(CORNER);
     image(backgroundImg,0 , 0, windowWidth, windowHeight);
     bird.show();
     bird.update();
 
-    if (frameCount % 300 === 0) {
+    if (frameCount % 50 === 0) {
         pipes.push(new pipe());
     }
     for (let i = 0; i < pipes.length; i++) {
